@@ -1,0 +1,30 @@
+<uses-permission android:name="android.permission.READ_CONTACTS" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.RECEIVE_SMS" />
+<uses-permission android:name="android.permission.READ_SMS" />
+<uses-permission android:name="android.permission.GET_TASKS" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+<activity
+   android:name="com.mob.tools.MobUIShell"
+   android:theme="@android:style/Theme.Translucent.NoTitleBar"
+   android:configChanges="keyboardHidden|orientation|screenSize"
+   android:windowSoftInputMode="stateHidden|adjustResize"/>
+
+1.3、在Application节点下添加以下属性：
+
+android:name="com.mob.MobApplication"
+1.4、在Application节点下添加以下meta-data：
+
+<!-- 通过AndroidManifest配置AppKey和AppSecret，如果你选择通过代码配置，则不需要配置以下meta-data -->
+<meta-data android:name="Mob-AppKey" android:value="你的AppKey"/>
+<meta-data android:name="Mob-AppSecret" android:value="你的AppSecret"/>
+
+最后加上Activity的注册
+
+
+

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+<include layout="@layout/layout_register_title" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
+    android:layout_marginLeft="18dp"
+    android:layout_marginRight="18dp">
+
+    <RelativeLayout
+        android:id="@+id/layout_input_account"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="56dp">
+
+        <TextView
+            android:id="@+id/tv_tips_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/et_v_getcode"
+            android:layout_alignBottom="@+id/et_v_getcode"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="18dp"
+            android:text="账号"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_test1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:padding="5dp"
+            android:text="@string/get_verification_code"
+            android:textColor="@color/et_hint_words_gray"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_v_getcode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/tv_tips_account"
+            android:layout_toRightOf="@+id/tv_tips_account"
+            android:layout_toStartOf="@+id/tv_test1"
+            android:background="@android:color/transparent"
+            android:hint="@string/reg_phone"
+            android:inputType="phone"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_words_gray"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/hint_words_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_input_v_code"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/layout_input_account"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/tv_tips_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:text="验证码"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+        <EditText
+            android:id="@+id/et_v_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/tv_tips_pwd"
+            android:layout_toRightOf="@+id/tv_tips_pwd"
+            android:background="@android:color/transparent"
+            android:hint="@string/verification_code"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_words_gray"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/hint_words_gray" />
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/cb_get_clause"
+        style="@style/LoginCheckboxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_input_v_code"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:text="同意"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/tv_clause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_input_v_code"
+        android:layout_toRightOf="@+id/cb_get_clause"
+        android:layout_toEndOf="@+id/cb_get_clause"
+        android:layout_marginTop="25dp"
+        android:text="《会员服务条款》"
+        android:textColor="@color/default_green"
+        android:textSize="14sp" />
+
+
+    <Button
+        android:id="@+id/tv_test_vcode_valiable"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/cb_get_clause"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/corners_bg_gray"
+        android:clickable="false"
+        android:text="@string/app_ok"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>
+
+</LinearLayout>

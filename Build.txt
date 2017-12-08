@@ -1,0 +1,14 @@
+2.2、在Module的build.gradle里面将libs加入仓库（repositories）：
+
+repositories{
+    flatDir{
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
+2.3、在Module的build.gradle里面添加依赖（dependencies ）注意：SMSSDK-<verison>，是随着版本变化的；eg：3.0.0的版本则需要改成：compile name:’SMSSDK-3.0.0′,ext:’aar’
+
+dependencies {
+    ....//你的其他依赖
+    compile name:'SMSSDK-<version>',ext:'aar'
+    compile name:'SMSSDKGUI-<version>',ext:'aar'
+}
